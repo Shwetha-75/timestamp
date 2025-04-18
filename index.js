@@ -28,7 +28,7 @@ app.get("/api/:date",(req,resp)=>{
   if(isNaN(date)){
     return resp.json({'unix':new Date(Date.now()).getTime()})
   }
-   const unix = new Date(date).getTime()
+   const unix = new Date(date).getTime()/1000
   
    resp.json({'unix':unix});
 
