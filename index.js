@@ -22,7 +22,7 @@ app.get("/api/:date",(req,resp)=>{
    const date = req.params['date'];
    if(!date){
     
-    return resp.json({'unix':new Date(Date.now()).getTime()})
+    return resp.json({ error : "Invalid Date" })
    }
 
   if(isNaN(date)){
